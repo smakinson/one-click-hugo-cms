@@ -61,8 +61,8 @@ rules:
   no-multiple-empty-lines: [2, {max: 2}]
   no-trailing-spaces: 2
   object-curly-spacing: [2, "never"]
-  quotes: [2, "double", "avoid-escape"]
-  semi: 2
+  quotes: [2, "single", "avoid-escape"]
+  #semi: 2
   space-before-blocks: [2, "always"]
   space-before-function-paren: [2, "never"]
   space-in-parens: [2, "never"]
@@ -71,13 +71,13 @@ rules:
 
   # ECMAScript 6
   # http://eslint.org/docs/rules/#ecmascript-6
-  arrow-parens: [2, "always"]
+  #arrow-parens: [2, "always"]
   arrow-spacing: [2, {"before": true, "after": true}]
   no-confusing-arrow: 2
   prefer-const: 2
 
   # JSX
-  jsx-quotes: [2, "prefer-double"]
+  jsx-quotes: [2, "prefer-single"]
 
   # Import
   import/no-unresolved: [1, {"commonjs": true, "amd": true}]

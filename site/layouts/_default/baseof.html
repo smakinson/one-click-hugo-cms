@@ -1,9 +1,84 @@
 <!doctype html>
 <html lang="en">
-  {{ partial "head" . }}
-  <body class="sans-serif">
-    {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }} 
-    {{ partial "footer" . }} 
-  </body>
+<head>
+  <title>MorningStar Cowboy Retreat</title>
+  <link rel="stylesheet" href="/css/main.css"/>
+
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">-->
+
+  <!-- Favicons TODO -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff4400">
+  <meta name="theme-color" content="#fff">
+
+  <!-- Open Graph TODO -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="MorningStart Cowboy Retreat | TODO">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="/img/og-image.jpg">
+
+  <!--<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>-->
+</head>
+<body class="sans-serif">
+
+<div class="absolute w-100 shadow-2 bg-white-70 bb b--white">
+  <nav class="db dt-l w-100 border-box pa3 ph5-l">
+    <a class="db dtc-l v-mid mid-gray link dim w-100 w-25-l tc tl-l mb2 mb0-l" href="#" title="Home">
+      <img src="http://tachyons.io/img/logo.jpg" class="dib w2 h2 br-100" alt="MorningStar Cowboy Retreat">
+    </a>
+    <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+      <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
+      <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="About">About</a>
+      <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Events">Events</a>
+      <a class="link dim dark-gray f6 f5-l dib mr3 mr4-l" href="#" title="Become a Sponsor">Become a Sponsor</a>
+      <a class="link dim dark-gray f6 f5-l dib" href="#" title="Contact">Contact</a>
+    </div>
+  </nav>
+</div>
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="bg-black ph3 pv4 white">
+  <!-- TODO -->
+  <div class="mw8 center pt3">
+    <div class="flex-ns justify-between">
+      <nav>
+        <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Home">Home</a>
+        <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="About">About</a>
+        <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Events">Events</a>
+        <a class="link dim white f6 f5-l dib mr3 mr4-l" href="#" title="Become a Sponsor">Become a Sponsor</a>
+        <a class="link dim white f6 f5-l dib" href="#" title="Contact">Contact</a>
+      </nav>
+      <div>
+        <h3 class="f4 b lh-title mb2 primary">Social media</h3>
+        <nav class="flex flex-nowrap">
+          {{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
+          {{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
+          {{ partial "social-icon" (dict "link" "#" "svg" "icons-youtube") }}
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+
+<!-- for injecting svg -->
+{{ partial "svg" . }}
+
+<!--<script src="/app.js"></script>-->
+
+</body>
+
+</html>
+
+</body>
 </html>

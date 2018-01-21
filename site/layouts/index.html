@@ -1,13 +1,88 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
-
-{{ partial "short-text" .Params.blurb}}
-
-{{ partial "2-up" .Params }}
-
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
-
-{{ partial "blog" . }}
+<article class="bg-white">
+  <div class="vh-100 dt w-100 tc bg-dark-gray white cover bb bw4 b--white-50" style="background:url(/img/homepage-bg.jpg) no-repeat center;">
+    <div class="dtc v-mid">
+      <header class="bg-black-60 pv3 bt bb bw3 b--white-50">
+        <h2 class="f1 f-headline-l fw2 white mb0">MorningStar Cowboy Retreat</h2>
+        <hr class="w-50 center bt-0 b--white-60 mv4">
+        <blockquote class="ph0 mh0 measure f4 lh-copy center">
+          <p class="fw2 white tracked-mega">
+            Hey Joe, this needs a quote from you or the Pastor. Can you get me that please?
+          </p>
+          <cite class="f6 ttu tracked fs-normal">~ Joe Heagy</cite>
+        </blockquote>
+      </header>
+    </div>
+  </div>
+  <div class="ph4 ph5-m ph6-l">
+    <div class="pv5 f4 f2-ns measure center">
+      <h1 class="fw6 f1 fl w-100 black-70 mt0 mb3 avenir">About MorningStar Cowboy Retreat</h1>
+      <p class="db lh-copy black-70 serif fw1 mv0 f4 f3-m f2-l measure baskerville">
+        A description telling about things at high level. Some more generic photos below. Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit, sed do eiusmod tempor incididunt ut labore etc. al dolore magna
+        aliqua. Ut enim ad.
+      </p>
+    </div>
+    <div class="cf mw8 center">
+      <div class='fl w-33 w-50-m w-33-l pr2 pr2-l'>
+        <div class="pv6 cover bg-center" style="background: url(http://lorempixel.com/800/800/abstract/);"></div>
+      </div>
+      <div class='fl w-33 w-50-m w-33-l ph3 pr0-m ph3-l'>
+        <div class="pv6 cover bg-center" style="background-image: url(http://lorempixel.com/800/800/abstract/);"></div>
+      </div>
+      <div class='fl w-33 w-100-m w-33-l pl2 pl0-m pl2-l mt4-m'>
+        <div class="pv6 cover bg-center" style="background-image: url(http://lorempixel.com/800/800/abstract/);"></div>
+      </div>
+    </div>
+    <div class="measure f3 center mv5 black-70">
+      <h1 class="fw6 f3 avenir">An Event Here (with a big photo below it)</h1>
+      <p class="lh-copy measure f4 f3-ns black-70 baskerville">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod laoreet ipsum rutrum rutrum. Cras sit amet metus aliquet, imperdiet leo vel, pulvinar ante. Morbi sodales lacus at sodales hendrerit. Vivamus sapien lacus, consectetur vitae molestie sed, mattis id dolor. Nunc viverra ex nisl, non gravida lacus auctor eget. Nullam ornare enim massa, et faucibus ante fermentum at. Phasellus et dictum lectus. Cras quis lacinia neque. Nullam fermentum quam quis diam convallis, eget faucibus risus finibus. In sit amet ornare nisi. Nulla luctus, enim ac fringilla vulputate, erat magna finibus diam, nec porta metus nisi in erat. Fusce tristique ac sapien quis rhoncus. Duis iaculis commodo volutpat. Suspendisse pharetra, tellus vel vulputate ultricies, orci ipsum pellentesque ligula, euismod fermentum arcu dolor ut sem. Nullam turpis ipsum, porttitor vel magna nec, lobortis faucibus mi. Vestibulum velit metus, dignissim ut velit quis, venenatis fermentum diam.
+      </p>
+      <p class="lh-copy measure f4 f3-ns black-70 baskerville">
+        Maecenas lobortis, ante et blandit tempus, diam nisi ultrices lorem, nec ultricies nunc ante vitae mauris. In ornare arcu id sapien rutrum, id luctus orci porta. Aenean tellus neque, venenatis ac maximus at, dignissim quis justo. Aliquam quis pellentesque magna. Suspendisse eu quam molestie, ullamcorper metus non, fermentum tortor. Morbi gravida commodo odio, eget hendrerit orci accumsan vitae. Duis viverra mattis felis, eget consequat purus maximus eget. Cras pellentesque eu metus a ultrices. Pellentesque faucibus venenatis leo a porttitor. Cras purus elit, sodales id volutpat quis, maximus ac urna. Pellentesque nec sapien bibendum, ultrices orci at, fermentum nunc. Ut vitae sapien lorem. Cras dignissim, risus vitae placerat malesuada, turpis lacus vulputate odio, sed sollicitudin dolor elit sit amet urna.
+      </p>
+    </div>
+    <img src="http://lorempixel.com/400/300/abstract/" class="db w-100"/>
+    <blockquote class="mh0 pr0 mt5">
+      <p class="f2 f1-l fw1 mv0 tc lh-title baskerville">
+        &ldquo;An event related quote could go here. A video below it if you are doing those.&rdquo;
+      </p>
+      <p class="tc f6 gray">
+        Joe Heagy
+      </p>
+    </blockquote>
+    <div class="measure f4 f3-ns center mv5 black-70">
+      <p class="lh-copy measure f3 black-70 baskerville">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod laoreet ipsum rutrum rutrum. Cras sit amet metus aliquet, imperdiet leo vel, pulvinar ante. Morbi sodales lacus at sodales hendrerit. Vivamus sapien lacus, consectetur vitae molestie sed, mattis id dolor. Nunc viverra ex nisl, non gravida lacus auctor eget. Nullam ornare enim massa, et faucibus ante fermentum at. Phasellus et dictum lectus. Cras quis lacinia neque. Nullam fermentum quam quis diam convallis, eget faucibus risus finibus. In sit amet ornare nisi. Nulla luctus, enim ac fringilla vulputate, erat magna finibus diam, nec porta metus nisi in erat. Fusce tristique ac sapien quis rhoncus. Duis iaculis commodo volutpat. Suspendisse pharetra, tellus vel vulputate ultricies, orci ipsum pellentesque ligula, euismod fermentum arcu dolor ut sem. Nullam turpis ipsum, porttitor vel magna nec, lobortis faucibus mi. Vestibulum velit metus, dignissim ut velit quis, venenatis fermentum diam.
+      </p>
+      <div class="aspect-ratio aspect-ratio--16x9 mv5">
+        <iframe src="https://www.youtube.com/embed/LAr6oAKieHk" class="aspect-ratio--object" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="cf mt5 pv5 bt b--black-05 ph6-l">
+  <h1 class="tc f5 ttu fw6 tracked mb4 avenir">Other Events</h1>
+  <a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+    <div class="grow cover bg-center pv5 pv6-l" style="background-image:url(http://lorempixel.com/800/800/abstract/);"></div>
+  </a>
+  <a href="#0" class="fl w-third w-25-ns border-box overflow-hidden  ba bw2 white" title="">
+    <div class="grow cover bg-top pv5 pv6-l" style="background-image:url(http://lorempixel.com/800/800/abstract/);"></div>
+  </a>
+  <a href="#0" class="fl w-third w-25-ns border-box overflow-hidden ba bw2 white" title="">
+    <div class="grow cover bg-top pv5 pv6-l" style="background-image:url(http://lorempixel.com/800/800/abstract/);"></div>
+  </a>
+  <a href="#0" class="fl w-100 w-25-ns border-box overflow-hidden ba bw2 white" title="">
+    <div class="grow cover bg-top pv5 pv6-l" style="background-image:url(http://lorempixel.com/800/800/abstract/);"></div>
+  </a>
+  <a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+    <div class="grow cover bg-center pv5 pv7-l" style="background-image:url(http://lorempixel.com/800/800/abstract/);"></div>
+  </a>
+  <a href="#0" class="fl w-50 border-box overflow-hidden ba bw2 white" title="">
+    <div class="grow cover bg-center pv5 pv7-l" style="background-image:url(http://lorempixel.com/800/800/abstract/);"></div>
+  </a>
+</section>
 
 {{ end }}
